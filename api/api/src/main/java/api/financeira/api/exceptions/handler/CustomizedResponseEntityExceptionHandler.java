@@ -2,7 +2,7 @@ package api.financeira.api.exceptions.handler;
 
 
 import api.financeira.api.exceptions.ExceptionResponse;
-import api.financeira.api.exceptions.RequiredExistingObjectException;
+import api.financeira.api.exceptions.InvalidValueException;
 import api.financeira.api.exceptions.RequiredObjectIsNullException;
 import api.financeira.api.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -48,7 +48,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 
         return new ResponseEntity<>(exceptionResponse, HttpStatus.BAD_REQUEST);
     }
-    @ExceptionHandler(RequiredExistingObjectException.class)
+    @ExceptionHandler(InvalidValueException.class)
     public final ResponseEntity<ExceptionResponse> handleExistBadRequestException(Exception ex, WebRequest request){
         ExceptionResponse exceptionResponse = new ExceptionResponse(
                 new Date(),

@@ -1,7 +1,9 @@
 package api.financeira.api.models;
 
-import jakarta.persistence.*;
 
+
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -19,7 +21,7 @@ public class AccountModel implements Serializable {
     private String account;
     @Column(name = "bank_name",nullable = false,length = 50)
     private String bankName;
-    @Column(name = "balance",length = 9999999)
+    @Column(name = "balance")
     private Double balance = 0.0;
 
     public AccountModel() {

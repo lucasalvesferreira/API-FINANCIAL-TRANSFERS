@@ -1,9 +1,10 @@
 package api.financeira.api.models;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Table(name = "Scheduling")
@@ -13,30 +14,30 @@ public class SchedulingModel implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "source_account",nullable = false,length = 10)
-    private String sourceAccount;          //  Conta de origem
-    @Column(name = "target_account",nullable = false,length = 10)
-    private String targetAccount;         //  Conta de destino
-    @Column(name = "value",nullable = false,length = 9999)
-    private Double value;                //  Valor da transferência
-    @Column(name = "rate",nullable = false,length = 999)
-    private Double rate;                //  Taxa
-    @Column(name = "transfer_date",nullable = false)
-    private LocalDate transferDate;    //  Data da transferência
-    @Column(name = "appointment_date",nullable = false)
-    private LocalDate appointmentDate;//  Data de agendamento
+    @Column(name = "source_account",nullable = false,length = 10) //  Conta de origem
+    private String sourceAccount;
+    @Column(name = "target_account",nullable = false,length = 10)  //  Conta de destino
+    private String targetAccount;
+    @Column(name = "transfer_value",nullable = false) //  Valor da transferência
+    private Double transferValue;
+    @Column(name = "rate",nullable = false)  //  Taxa
+    private Double rate;
+    @Column(name = "transfer_date",nullable = false) //  Data da transferência
+    private LocalDate transferDate;
+    @Column(name = "appointment_date",nullable = false) //  Data de agendamento
+    private LocalDate appointmentDate ;
 
     public SchedulingModel() {
     }
 
-    public SchedulingModel(Long id, String sourceAccount, String targetAccount, Double value, Double rate, LocalDate transferDate, LocalDate appointmentDate) {
+    public SchedulingModel(Long id, String sourceAccount, String targetAccount, Double value, Double rate, LocalDate transferDate) {
         this.id = id;
         this.sourceAccount = sourceAccount;
         this.targetAccount = targetAccount;
-        this.value = value;
+        this.transferValue = value;
         this.rate = rate;
         this.transferDate = transferDate;
-        this.appointmentDate = appointmentDate;
+        this.appointmentDate = LocalDate.now();
     }
 
     public Long getId() {
@@ -63,12 +64,12 @@ public class SchedulingModel implements Serializable {
         this.targetAccount = targetAccount;
     }
 
-    public Double getValue() {
-        return value;
+    public Double getTransferValue() {
+        return transferValue;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setTransferValue(Double value) {
+        this.transferValue = value;
     }
 
     public Double getRate() {
@@ -94,4 +95,6 @@ public class SchedulingModel implements Serializable {
     public void setAppointmentDate(LocalDate appointmentDate) {
         this.appointmentDate = appointmentDate;
     }
+
+
 }
