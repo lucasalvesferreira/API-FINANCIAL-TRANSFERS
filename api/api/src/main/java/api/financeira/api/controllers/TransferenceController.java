@@ -6,6 +6,7 @@ import api.financeira.api.models.SchedulingModel;
 import api.financeira.api.services.SchedulingService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,7 +30,7 @@ public class TransferenceController {
         return ResponseEntity.ok(service.findById(id));
     }
     @GetMapping("/date/{date}")
-    public ResponseEntity<List<SchedulingModel>> findByDate(@PathVariable(value = "date") LocalDate date) {
+    public ResponseEntity<List<SchedulingModel>> findByDate(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate date) {
         return ResponseEntity.ok(service.findByDate(date));
     }
     @PostMapping("/")

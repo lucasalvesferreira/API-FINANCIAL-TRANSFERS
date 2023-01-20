@@ -1,5 +1,6 @@
 package api.financeira.api.services;
 
+import api.financeira.api.dtos.request.AccountRequest;
 import api.financeira.api.exceptions.RequiredObjectIsNullException;
 import api.financeira.api.exceptions.ResourceNotFoundException;
 import api.financeira.api.models.AccountModel;
@@ -31,8 +32,16 @@ public class AccountService {
        return account;
     }
 
-    public AccountModel create (AccountModel account){
-        return repository.save(account);
+    public AccountModel create (AccountRequest account){
+
+        AccountModel accountModel = new AccountModel();
+        accountModel.setOwner(account.getOwner());
+        accountModel.setAgency(account.getAgency());
+        accountModel.setAccount(account.getAccount());
+        accountModel.setBankName(account.getBankName());
+        accountModel.setBalance(account.getBalance());
+
+        return repository.save(accountModel);
     }
 
     public AccountModel update (AccountModel account){

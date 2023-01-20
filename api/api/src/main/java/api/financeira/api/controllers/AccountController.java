@@ -1,5 +1,6 @@
 package api.financeira.api.controllers;
 
+import api.financeira.api.dtos.request.AccountRequest;
 import api.financeira.api.models.AccountModel;
 import api.financeira.api.services.AccountService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -28,8 +29,8 @@ public class AccountController {
     }
 
     @PostMapping("/")
-    public ResponseEntity<AccountModel> create(@RequestBody AccountModel accountModel){
-        return ResponseEntity.ok(service.create(accountModel));
+    public ResponseEntity<AccountModel> create(@RequestBody AccountRequest account){
+        return ResponseEntity.ok(service.create(account));
     }
 
     @PutMapping("/")

@@ -1,8 +1,5 @@
 package api.financeira.api.models;
 
-
-
-
 import javax.persistence.*;
 import java.io.Serializable;
 

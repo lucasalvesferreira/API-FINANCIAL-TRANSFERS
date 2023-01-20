@@ -11,5 +11,5 @@ import java.util.List;
 public interface SchedulingRepository extends JpaRepository<SchedulingModel,Long> {
 
 
-    List<SchedulingModel> findByAppointmentDate(LocalDate date);
+    List<SchedulingModel> findByTransferDate(LocalDate date);
 }

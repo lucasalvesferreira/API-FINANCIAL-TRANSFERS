@@ -11,9 +11,7 @@ import api.financeira.api.repositories.SchedulingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -40,7 +38,7 @@ public class SchedulingService {
     }
 
     public List<SchedulingModel> findByDate(LocalDate date) {
-        return schedulingRepository.findByAppointmentDate(date);
+        return schedulingRepository.findByTransferDate(date);
     }
 
     public SchedulingResponse postScheduling(SchedulingRequest request) {
