@@ -10,9 +10,12 @@ public class SchedulingResponse {
     private Double transferValue;        //  Valor da transferência
     private Double rate;                //  Taxa
     private LocalDate transferDate;    //  Data da transferência
-    private Date appointmentDate ;//  Data de agendamento
+    private LocalDate appointmentDate ;//  Data de agendamento
 
-    public SchedulingResponse(Long id, String sourceAccount, String targetAccount, Double transferValue, Double rate, LocalDate transferDate, Date appointmentDate) {
+    public SchedulingResponse() {
+    }
+
+    public SchedulingResponse(Long id, String sourceAccount, String targetAccount, Double transferValue, Double rate, LocalDate transferDate, LocalDate appointmentDate) {
         this.id = id;
         this.sourceAccount = sourceAccount;
         this.targetAccount = targetAccount;
@@ -70,11 +73,11 @@ public class SchedulingResponse {
         this.transferDate = transferDate;
     }
 
-    public Date getAppointmentDate() {
+    public LocalDate getAppointmentDate() {
         return appointmentDate;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
+    public void setAppointmentDate(LocalDate appointmentDate) {
         this.appointmentDate = appointmentDate;
     }
 }

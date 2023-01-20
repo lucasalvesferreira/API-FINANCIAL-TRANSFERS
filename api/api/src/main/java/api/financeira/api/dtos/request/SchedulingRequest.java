@@ -9,8 +9,10 @@ public class SchedulingRequest {
     private String sourceAccount;          //  Conta de origem
     private String targetAccount;         //  Conta de destino
     private Double transferValue;        //  Valor da transferência
-    @FutureOrPresent
     private LocalDate transferDate;    //  Data da transferência
+
+    public SchedulingRequest() {
+    }
 
     public SchedulingRequest(String sourceAccount, String targetAccount, Double value, LocalDate transferDate) {
         this.sourceAccount = sourceAccount;

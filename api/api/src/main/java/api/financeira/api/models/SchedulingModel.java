@@ -4,7 +4,6 @@ package api.financeira.api.models;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "Scheduling")
@@ -25,7 +24,7 @@ public class SchedulingModel implements Serializable {
     @Column(name = "transfer_date",nullable = false) //  Data da transferência
     private LocalDate transferDate;
     @Column(name = "appointment_date",nullable = false) //  Data de agendamento
-    private LocalDate appointmentDate ;
+    private LocalDate appointmentDate = LocalDate.now() ;
 
     public SchedulingModel() {
     }
@@ -37,7 +36,6 @@ public class SchedulingModel implements Serializable {
         this.transferValue = value;
         this.rate = rate;
         this.transferDate = transferDate;
-        this.appointmentDate = LocalDate.now();
     }
 
     public Long getId() {

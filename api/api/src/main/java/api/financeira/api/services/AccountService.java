@@ -28,7 +28,7 @@ public class AccountService {
         AccountModel account = repository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("No records found for this id!"));
 
-       return account ;
+       return account;
     }
 
     public AccountModel create (AccountModel account){
