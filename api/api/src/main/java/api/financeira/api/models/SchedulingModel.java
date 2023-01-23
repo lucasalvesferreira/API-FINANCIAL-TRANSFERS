@@ -1,6 +1,8 @@
 package api.financeira.api.models;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -12,6 +14,7 @@ public class SchedulingModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonProperty("_id")
     private Long id;
     @Column(name = "source_account",nullable = false,length = 10) //  Conta de origem
     private String sourceAccount;
