@@ -54,7 +54,7 @@ Baixe o projeto o repositorio em sua maquina. Sera necessario uma ide para ambos
 
 # Para rodar o back-end:
 
-
+Basta buildar o projeto e rodar na ide
 
 Feito por: 
 -	LUCAS ALVES – FULLSTACK
