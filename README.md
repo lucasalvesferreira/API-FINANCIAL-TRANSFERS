@@ -26,3 +26,17 @@ Projeto criado com a intençao de um crud para agendamentos de transferencias em
 - Visual Studio Code
 
 
+# Como funciona:
+
+Para rodar o projeto basta seguir os passos abaixo:
+
+
+Baixe o projeto o repositorio em sua maquina. Sera necessario uma ide para ambos o projeto.
+- Ex: IntelJ, VsCode
+
+
+
+Feito por: 
+-	LUCAS ALVES – FULLSTACK
+lucas.aferreira@bandtec.com.br
+https://www.linkedin.com/in/lucas-alves-426304112/
