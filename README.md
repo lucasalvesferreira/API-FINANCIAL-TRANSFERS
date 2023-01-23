@@ -1,6 +1,7 @@
 # API-FINANCIAL-TRANSFERS
 
-Projeto criado com a intençao de um crud para agendamentos de transferencias.
+Projeto criado com a intençao de um crud para agendamentos de transferencias em bancos cadastrados na api onde a taxa e calculada de forma automatica e sendo listado todas as transferencias ou podendo agendar uma nova.
+
 
 # Ferramentas
 ![Badge](https://img.shields.io/badge/Code-Angular-0366d6?&logo=angular)
