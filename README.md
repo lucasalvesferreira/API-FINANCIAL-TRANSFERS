@@ -46,5 +46,5 @@ Baixe o projeto o repositorio em sua maquina. Sera necessario uma ide para ambos
 
 Feito por: 
 -	LUCAS ALVES – FULLSTACK
-  -lucas.aferreira@bandtec.com.br
+
   -https://www.linkedin.com/in/lucas-alves-426304112/
