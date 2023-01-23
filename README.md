@@ -36,6 +36,14 @@ Baixe o projeto o repositorio em sua maquina. Sera necessario uma ide para ambos
 
 
 
+# Para rodar o front-end:
+
+
+
+# Para rodar o back-end:
+
+
+
 Feito por: 
 -	LUCAS ALVES – FULLSTACK
 lucas.aferreira@bandtec.com.br
