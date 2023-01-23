@@ -1,0 +1,11 @@
+[
+  {
+      "id": 1,
+      "sourceAccount": "123456",
+      "targetAccount": "654321",
+      "transferValue": 200.0,
+      "rate": 3.4,
+      "transferDate": "2023-06-05",
+      "appointmentDate": "2023-01-20"
+  }
+]
