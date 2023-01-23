@@ -19,6 +19,7 @@ Projeto criado com a intençao de um crud para agendamentos de transferencias em
 - Spring Boot
 - h2
 - JPA
+- Swagger
 
 **Desnvolvimento**
 - IntelliJ
@@ -26,7 +27,14 @@ Projeto criado com a intençao de um crud para agendamentos de transferencias em
 - Visual Studio Code
 
 
+
 # Como funciona:
+** Antes de começar aconselho acessar a API do backend na rota http://localhost:8080/swagger-ui/index.html#/ **
+
+ Para fazer um insert e necessario passar uma das contas que ja estao cadastradas no banco de dados. Somente e possivel cadastrar contas atraves da api do back-end. Assim como tambem e possivel atualizar, excluir e procurar pelo id.
+ No front end assim que o programa e iniciado ele ja cai na tela onde serao listados todos os agendamentos, caso queira adiconar um novo, basta clicar no botao de + ao lado.
+ 
+
 
 Para rodar o projeto basta seguir os passos abaixo:
 
@@ -37,7 +45,11 @@ Baixe o projeto o repositorio em sua maquina. Sera necessario uma ide para ambos
 
 
 # Para rodar o front-end:
-
+ Comandos: 
+ 
+ * npm install
+ * npm run start
+ 
 
 
 # Para rodar o back-end:
